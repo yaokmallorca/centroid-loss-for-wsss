@@ -497,7 +497,7 @@ class AttU_Net(nn.Module):
         elif self.Centroids:
             d1_seg = self.Conv_Seg(d2)
             # print("d2: ", d2.size())
-            d1_avg = self.avgpool(x4) # x4
+            d1_avg = self.avgpool(x5) # x4
             d1_avg = torch.flatten(d1_avg, 1)
             d1_cen = self.LinearCen(d1_avg)
             # d1_rec = self.drop(d1_rec)
